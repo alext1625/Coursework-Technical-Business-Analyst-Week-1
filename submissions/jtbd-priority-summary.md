@@ -4,16 +4,16 @@ Source evidence: [data/stakeholder_interview_notes.csv](../data/stakeholder_inte
 
 ## Prioritised JTBD Statements
 
-| JTBD ID | Actor | Statement | Priority | Evidence strength | Evidence link(s) |
-|---|---|---|---|---|---|
-| JTBD-001 | Customer | When I have an outstanding balance, I want transparent information on what I owe and what options I have, so that I can act confidently without repeated support calls. | High | High | [SN-001](#sn-001), [SN-002](#sn-002) |
-| JTBD-002 | Agent | When I start contacting customers, I want a single reliable view of prior contact activity, so that I do not duplicate outreach or waste time checking multiple sheets. | Critical | High | [SN-063](#sn-063), [SN-073](#sn-073) |
-| JTBD-003 | Operations Manager | When simple and complex cases enter the queue, I want routing to separate them correctly first time, so that straightforward cases are resolved quickly instead of waiting days. | High | Medium | [SN-003](#sn-003) |
-| JTBD-004 | Operations Manager | When I run day-to-day collections operations, I want concise case context at handoff, so that agent time is spent on customer contact rather than reconstructing case history. | Medium | Medium | [SN-094](#sn-094) |
-| JTBD-005 | Finance Partner | When I forecast recovery revenue, I want trusted and timely activity data, so that forecasts are credible for planning and target setting. | Critical | High | [SN-070](#sn-070), [SN-012](#sn-012) |
-| JTBD-006 | Finance Partner | When I evaluate self-service savings claims, I want measurable and attributable workload reduction, so that business cases reflect real rather than theoretical benefits. | High | High | [SN-031](#sn-031), [SN-046](#sn-046) |
-| JTBD-007 | Head of Debt Recovery Operations | When callback commitments are made, I want callback dates to be enforced and owned, so that cases do not remain indefinitely pending and recovery momentum is maintained. | Critical | High | [SN-118](#sn-118), [SN-040](#sn-040) |
-| JTBD-008 | Compliance Liaison | When deciding whether to scale a change, I want clear before-and-after performance evidence, so that rollout decisions are based on proven value and controlled risk. | High | Medium | [SN-043](#sn-043) |
+| JTBD ID | Actor | Statement | Frequency of evidence | Business impact | Relevance to portal | Overall priority | Evidence link(s) |
+|---|---|---|---|---|---|---|---|
+| JTBD-001 | Customer | When I have an outstanding balance, I want transparent information on what I owe and what options I have, so that I can act confidently without repeated support calls. | M | H | H | High | [SN-001](#sn-001), [SN-002](#sn-002) |
+| JTBD-002 | Agent | When I start contacting customers, I want a single reliable view of prior contact activity, so that I do not duplicate outreach or waste time checking multiple sheets. | H | H | H | High | [SN-063](#sn-063), [SN-073](#sn-073) |
+| JTBD-003 | Operations Manager | When simple and complex cases enter the queue, I want routing to separate them correctly first time, so that straightforward cases are resolved quickly instead of waiting days. | M | H | M | Medium | [SN-003](#sn-003) |
+| JTBD-004 | Operations Manager | When I run day-to-day collections operations, I want concise case context at handoff, so that agent time is spent on customer contact rather than reconstructing case history. | M | M | M | Medium | [SN-094](#sn-094) |
+| JTBD-005 | Finance Partner | When I forecast recovery revenue, I want trusted and timely activity data, so that forecasts are credible for planning and target setting. | H | H | M | High | [SN-070](#sn-070), [SN-012](#sn-012) |
+| JTBD-006 | Finance Partner | When I evaluate self-service savings claims, I want measurable and attributable workload reduction, so that business cases reflect real rather than theoretical benefits. | M | H | M | Medium | [SN-031](#sn-031), [SN-046](#sn-046) |
+| JTBD-007 | Head of Debt Recovery Operations | When callback commitments are made, I want callback dates to be enforced and owned, so that cases do not remain indefinitely pending and recovery momentum is maintained. | H | H | M | High | [SN-118](#sn-118), [SN-040](#sn-040) |
+| JTBD-008 | Compliance Liaison | When deciding whether to scale a change, I want clear before-and-after performance evidence, so that rollout decisions are based on proven value and controlled risk. | L | M | M | Medium | [SN-043](#sn-043) |
 
 ## Evidence Reference
 
@@ -70,7 +70,22 @@ Stakeholder: Amina Rahman (Head of Debt Recovery Operations)
 Quote: Cases get stuck in 'pending callback' status indefinitely because the callback date is never enforced.
 
 
-## How values were calculated
-Priority was set by weighing likely business impact (for example recovery leakage, operational delay, compliance risk, and planning/forecasting impact) alongside how cross-functional the problem appears across roles. 
+## Top 3 unmet jobs - short justification
 
-Evidence strength was set by quote specificity (clear, concrete failure mode), source proximity to the issue, and corroboration from other notes that described the same underlying problem pattern.
+### JTBD-002: Unified contact history view
+- Why this matters now: Agents currently check multiple sheets to trace contact history, creating duplication, wasted time, and risk of repeated outreach that damages customer relationships.
+- Supporting evidence: [SN-063](#sn-063), [SN-073](#sn-073).
+- Influence on Phase 1 scope: Unified activity logging with contact-type classification must be a core Phase 1 feature to unblock agent efficiency and ensure data integrity for downstream reporting.
+
+### JTBD-005: Trusted activity data for finance forecasting
+- Why this matters now: Finance cannot forecast recovery revenue with confidence because activity data quality is too poor, blocking credible planning, target setting, and business case validation.
+- Supporting evidence: [SN-070](#sn-070), [SN-012](#sn-012).
+- Influence on Phase 1 scope: Phase 1 must establish a data quality baseline and reliable activity capture to create the single source of truth required for finance confidence and ROI measurement.
+
+### JTBD-007: Callback enforcement and ownership
+- Why this matters now: Cases remain indefinitely pending because callback dates are not enforced or owned, causing follow-up leakage and slowing recoveries.
+- Supporting evidence: [SN-118](#sn-118), [SN-040](#sn-040).
+- Influence on Phase 1 scope: Phase 1 workflow design must include callback tracking, ownership, and escalation rules to prevent stalled cases and handoff failures.
+
+## Ranking method used
+Each JTBD was scored High, Medium, or Low against frequency of evidence, business impact, and relevance to the portal. Overall priority is High when at least two criteria are High, Medium otherwise, and Low only where the pattern is mostly Low.
