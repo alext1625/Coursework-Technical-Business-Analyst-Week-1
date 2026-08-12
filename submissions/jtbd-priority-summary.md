@@ -39,7 +39,8 @@ Quote: If self-service reduces agent workload, that headcount saving needs to be
 
 ### SN-040
 Stakeholder: Catherine Frost (Data Analyst)  
-Quote: We lose at least 20% of follow-ups because they fall between shifts and no one owns the handoff.
+Quote: We lose at least 20% of follow-ups because they fall between shifts and no one owns the handoff.  
+Caveat: this is a stakeholder estimate, not a measured system figure.
 
 ### SN-043
 Stakeholder: Simon Burns (Compliance Liaison)  
@@ -75,7 +76,7 @@ Quote: Cases get stuck in 'pending callback' status indefinitely because the cal
 ### JTBD-002: Unified contact history view
 - Why this matters now: Agents currently check multiple sheets to trace contact history, creating duplication, wasted time, and risk of repeated outreach that damages customer relationships.
 - Supporting evidence: [SN-063](#sn-063), [SN-073](#sn-073).
-- Influence on Phase 1 scope: Unified activity logging with contact-type classification must be a core Phase 1 feature to unblock agent efficiency and ensure data integrity for downstream reporting.
+- Influence on Phase 1 scope: Unified activity logging with contact-type classification must be a core Phase 1 feature. To turn this into a defensible pound figure, Phase 1 must first baseline current agent time spent per duplicate-check and the resulting case volume, then apply a validated hourly cost rate — until that baseline exists, any savings estimate remains directional, not provable.
 
 ### JTBD-005: Trusted activity data for finance forecasting
 - Why this matters now: Finance cannot forecast recovery revenue with confidence because activity data quality is too poor, blocking credible planning, target setting, and business case validation.
@@ -87,5 +88,19 @@ Quote: Cases get stuck in 'pending callback' status indefinitely because the cal
 - Supporting evidence: [SN-118](#sn-118), [SN-040](#sn-040).
 - Influence on Phase 1 scope: Phase 1 workflow design must include callback tracking, ownership, and escalation rules to prevent stalled cases and handoff failures.
 
+### Note
+JTBD-001 is high priority but depends on JTBD-002, JTBD-005, and JTBD-007 being addressed first; customer-facing transparency cannot deliver value until contact history is unified, activity data is trusted, and callback ownership is enforced.
+
 ## Ranking method used
 Each JTBD was scored High, Medium, or Low against frequency of evidence, business impact, and relevance to the portal. Overall priority is High when at least two criteria are High, Medium otherwise, and Low only where the pattern is mostly Low.
+
+## Baseline measurement approach
+Not yet started. Before any Phase 1 benefit (including JTBD-002, JTBD-005, and JTBD-006) can be quantified in pounds, we need a measured current-state baseline, not stakeholder estimates:
+- Agent time spent per duplicate-check / contact-history lookup (time-and-motion sample across agents).
+- Actual follow-up loss rate from system/audit logs, replacing Catherine Frost's 20% estimate (SN-040) with a measured figure.
+- Current forecast variance between finance projections and actual recovered revenue.
+- Current cost of workarounds, sourced from time-tracking rather than anecdote (per Christopher Richards, SN-046).
+
+Until this baseline is captured, savings claims in the ROI model should be labelled as estimated/hypothetical rather than measured.
+
+
