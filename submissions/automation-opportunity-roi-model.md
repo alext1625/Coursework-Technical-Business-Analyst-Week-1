@@ -70,3 +70,57 @@ Below is the consolidated **ROI Summary** ranking all five initiatives by financ
 ---
 
 ## Scenario Comparison 
+
+### Scenario Performance Comparison
+
+| Opportunity ID | Cost (£) | Conservative Net Benefit (£) | Conservative Payback | Base Case Net Benefit (£) | Base Case Payback | Optimistic Net Benefit (£) | Optimistic Payback |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **OP-01** | £45,000[cite: 1] | £1,025,080[cite: 1] | 0.50 mos[cite: 1] | £1,292,600[cite: 1] | 0.40 mos[cite: 1] | £1,426,360[cite: 1] | 0.37 mos[cite: 1] |
+| **OP-02** | £45,000[cite: 1] | £356,280[cite: 1] | 1.35 mos[cite: 1] | £2,856,600[cite: 1] | 0.19 mos[cite: 1] | £3,146,760[cite: 1] | 0.17 mos[cite: 1] |
+| **OP-03** | £85,000[cite: 1] | £583,800[cite: 1] | 1.53 mos[cite: 1] | £4,591,000[cite: 1] | 0.22 mos[cite: 1] | £5,058,600[cite: 1] | 0.20 mos[cite: 1] |
+| **OP-04** | £45,000[cite: 1] | £222,520[cite: 1] | 2.02 mos[cite: 1] | £289,400[cite: 1] | 1.61 mos[cite: 1] | £322,840[cite: 1] | 1.47 mos[cite: 1] |
+| **OP-05** | £85,000[cite: 1] | £450,040[cite: 1] | 1.91 mos[cite: 1] | £583,800[cite: 1] | 1.53 mos[cite: 1] | £650,680[cite: 1] | 1.39 mos[cite: 1] |
+| **TOTAL** | **£305,000**[cite: 1] | **£2,637,720**[cite: 1] | **1.24 mos**[cite: 1] | **£9,613,400**[cite: 1] | **0.37 mos**[cite: 1] | **£10,605,240**[cite: 1] | **0.34 mos**[cite: 1] |
+
+> **Finance Defense Logic:** Under the **Conservative Scenario** (testing 80% handling efficiency and assuming **£0 soft revenue uplift**), the portfolio still generates **£2.64M in net hard savings**, paying back the entire £305k capital spend in **1.24 months (under 38 days)**[cite: 1, 5]. The business case does not depend on optimistic recovery assumptions to prove a rapid 12-month payback[cite: 5, 10].
+
+---
+
+## Strategic Recommendations & Phase 1 Scope
+
+While **OP-03 (Payment Plan Selection)** offers the highest raw total return (£4.68M), raw ROI alone does not dictate Phase 1 priority[cite: 1, 5, 10]. We recommend balancing value against build feasibility, operational risk, and stakeholder needs[cite: 4, 10].
+
+### Recommended Phase 1 Implementation Scope (£175,000 Total Capital Spend)
+
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ MUST-HAVE PHASE 1 CORE (£175,000 Investment)                                           │
+│                                                                                        │
+│ 1. OP-01: Self-Serve Account Summary (£45k Build)                                     │
+│    • Core UI component providing balance transparency & account lookup.                │
+│    • Delivers £1.29M in net hard labor savings with a 12-day payback.                  │
+│                                                                                        │
+│ 2. OP-02: Digital Promise-to-Pay Capture (£45k Build)                                  │
+│    • Replaces manual note-taking and enforces callback SLA timers.                     │
+│    • Solves Amina's primary pain point (SN-118) and delivers £2.86M net benefit.       │
+│                                                                                        │
+│ 3. OP-05: Rules-Based Case Routing (£85k Build)                                       │
+│    • Core screening engine protecting specialist agent queues.                         │
+│    • Satisfies Gareth's boundary requirement by filtering out hardship/dispute cases.  │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+
+### Justification for Deferring OP-03 & OP-04 to Phase 2
+
+1. **Prerequisite Dependencies:** Customers cannot safely execute legally binding debt payment schedules (**OP-03**) until identity verification (**OP-01**) and automated risk screening (**OP-05**) are established in production[cite: 4, 7].
+2. **Integration Complexity:** OP-03 requires building dynamic interest recalculation rules and integrating third-party payment gateways (£85k medium build)[cite: 1, 4, 7]. Deferring OP-03 prevents delivery bottlenecks for **Product Manager Priya Nair** during initial portal rollout[cite: 2, 10].
+3. **Compliance Risk Shield:** Launching OP-03 without OP-05's routing rules risks allowing vulnerable customers to auto-commit to unviable payment schedules, creating regulatory compliance exposure[cite: 4, 7, 10].
+
+---
+
+## Implications for Phase 2 Backlog & Prototyping
+
+1. **Immediate Backlog Prioritization:**
+   * **Sprint 1–2:** Build OP-01 read-only account summary dashboard & user authentication[cite: 2, 4, 7].
+   * **Sprint 3–4:** Implement OP-02 promise-to-pay capture form & automated SLA callback trigger[cite: 2, 4, 7].
+   * **Sprint 5–6:** Deploy OP-05 backend case screening engine (`risk_flag == 'N'` filtering)[cite: 1, 2, 4, 7].
+2. **Phase 2 Scope Hand-off:**
+   * Transition **OP-03 (Payment Plan Engine)** and **OP-04 (Contact Detail Updates)** into the Phase 2 product backlog once core portal stability and callback enforcement are validated in production[cite: 2, 4, 5, 10].
